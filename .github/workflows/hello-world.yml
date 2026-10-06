@@ -1,0 +1,19 @@
+name: Hello World CI
+
+on: [push]
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello step
+        run: echo "Hello from Мұрат"
+
+      - name: OS info
+        run: uname -a
+
+      - name: Қосымша ақпарат
+        run: |
+          echo "Қолданушы: $(whoami)"
+          echo "Күні: $(date)"
+          cat /etc/os-release
